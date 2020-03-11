@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TravelBook" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4mT-vp-eSh">
+                                <rect key="frame" x="0.0" y="217" width="414" height="586"/>
+                            </mapView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rs9-Qx-ykm">
+                                <rect key="frame" x="20" y="79" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y0a-ts-NP3">
+                                <rect key="frame" x="20" y="143" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="y0a-ts-NP3" firstAttribute="top" secondItem="Rs9-Qx-ykm" secondAttribute="bottom" constant="30" id="313-Vp-9Wq"/>
+                            <constraint firstItem="Rs9-Qx-ykm" firstAttribute="leading" secondItem="y0a-ts-NP3" secondAttribute="leading" id="6RE-xZ-ybA"/>
+                            <constraint firstItem="Rs9-Qx-ykm" firstAttribute="trailing" secondItem="y0a-ts-NP3" secondAttribute="trailing" id="MPq-kV-gIS"/>
+                            <constraint firstItem="4mT-vp-eSh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="a7w-Gr-XOO"/>
+                            <constraint firstItem="Rs9-Qx-ykm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eQL-PA-evD"/>
+                            <constraint firstItem="Rs9-Qx-ykm" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="gLU-vk-CXR"/>
+                            <constraint firstItem="y0a-ts-NP3" firstAttribute="centerX" secondItem="4mT-vp-eSh" secondAttribute="centerX" id="jbN-ul-Rhe"/>
+                            <constraint firstItem="4mT-vp-eSh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rmG-vh-Ywn"/>
+                            <constraint firstItem="Rs9-Qx-ykm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="sgs-Lp-nAp"/>
+                            <constraint firstItem="4mT-vp-eSh" firstAttribute="top" secondItem="y0a-ts-NP3" secondAttribute="bottom" constant="40" id="zOG-Jg-vni"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="commentText" destination="y0a-ts-NP3" id="wJt-4X-jpf"/>
+                        <outlet property="mapView" destination="4mT-vp-eSh" id="BUh-gB-84d"/>
+                        <outlet property="naameText" destination="Rs9-Qx-ykm" id="6Jz-Ih-9xl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>

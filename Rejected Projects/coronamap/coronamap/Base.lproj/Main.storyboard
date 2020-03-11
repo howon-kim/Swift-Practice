@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zar-NY-uxP">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Binggrae-Bold.otf">
+            <string>Binggrae-Bold</string>
+        </array>
+        <array key="BinggraeMelona.otf">
+            <string>BinggraeMelona</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="coronamap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="116"/>
+        </scene>
+        <!--Reaction View Controller-->
+        <scene sceneID="Kmp-xJ-O8f">
+            <objects>
+                <viewController storyboardIdentifier="ReactionViewController" id="M4Z-v1-hJf" customClass="ReactionViewController" customModule="coronamap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W4R-iH-6q2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LLk-dl-QJB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="LLk-dl-QJB" firstAttribute="centerY" secondItem="W4R-iH-6q2" secondAttribute="centerY" id="21f-y6-52a"/>
+                            <constraint firstItem="LLk-dl-QJB" firstAttribute="top" secondItem="W4R-iH-6q2" secondAttribute="topMargin" constant="-44" id="3rm-W5-CHU"/>
+                            <constraint firstItem="LLk-dl-QJB" firstAttribute="centerX" secondItem="W4R-iH-6q2" secondAttribute="centerX" id="JBy-Hv-ohi"/>
+                            <constraint firstItem="LLk-dl-QJB" firstAttribute="leading" secondItem="aYr-jd-wBL" secondAttribute="leading" id="n4W-0j-kRP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aYr-jd-wBL"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NvH-4D-MlG"/>
+                    <connections>
+                        <outlet property="backingImageView" destination="LLk-dl-QJB" id="JUH-7E-EFx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aG4-e7-Fhq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2028.985507246377" y="-552.45535714285711"/>
+        </scene>
+        <!--지도-->
+        <scene sceneID="Mlx-jU-B5z">
+            <objects>
+                <viewController id="rLm-8s-t0K" customClass="KRMapViewController" customModule="coronamap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8yT-Xa-rak">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vcl-gx-IzD">
+                                <rect key="frame" x="0.0" y="685" width="414" height="128"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W79-KB-eih">
+                                <rect key="frame" x="20" y="726" width="374" height="81"/>
+                                <fontDescription key="fontDescription" name="BinggraeMelona" family="Binggrae Melona" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wd9-Sw-5Dg">
+                                <rect key="frame" x="20" y="693" width="173" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="173" id="4TD-NE-w2E"/>
+                                    <constraint firstAttribute="height" constant="33" id="uoM-rL-33Z"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Binggrae-Bold" family="Binggrae" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9X-eP-Zls">
+                                <rect key="frame" x="221" y="693" width="173" height="33"/>
+                                <fontDescription key="fontDescription" name="Binggrae-Bold" family="Binggrae" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Bm5-VF-bsx" firstAttribute="bottom" secondItem="W79-KB-eih" secondAttribute="bottom" constant="6" id="8IU-as-8df"/>
+                            <constraint firstItem="Wd9-Sw-5Dg" firstAttribute="leading" secondItem="W79-KB-eih" secondAttribute="leading" id="BOf-Q3-4O7"/>
+                            <constraint firstItem="Vcl-gx-IzD" firstAttribute="centerX" secondItem="W79-KB-eih" secondAttribute="centerX" id="Do6-Pf-oeT"/>
+                            <constraint firstItem="Bm5-VF-bsx" firstAttribute="trailing" secondItem="u9X-eP-Zls" secondAttribute="trailing" constant="20" id="EW7-tp-djB"/>
+                            <constraint firstItem="W79-KB-eih" firstAttribute="top" secondItem="Wd9-Sw-5Dg" secondAttribute="bottom" id="HfC-tZ-jnl"/>
+                            <constraint firstItem="Wd9-Sw-5Dg" firstAttribute="firstBaseline" secondItem="u9X-eP-Zls" secondAttribute="firstBaseline" id="JZx-ts-Ww5"/>
+                            <constraint firstItem="Vcl-gx-IzD" firstAttribute="leading" secondItem="Bm5-VF-bsx" secondAttribute="leading" id="RsZ-vs-OwD"/>
+                            <constraint firstItem="Vcl-gx-IzD" firstAttribute="top" secondItem="Bm5-VF-bsx" secondAttribute="top" constant="641" id="U0b-2l-aoB"/>
+                            <constraint firstItem="Wd9-Sw-5Dg" firstAttribute="leading" secondItem="8yT-Xa-rak" secondAttribute="leadingMargin" id="b9e-KQ-3Md"/>
+                            <constraint firstItem="Wd9-Sw-5Dg" firstAttribute="top" secondItem="Bm5-VF-bsx" secondAttribute="top" constant="649" id="iUv-By-RPY"/>
+                            <constraint firstItem="Wd9-Sw-5Dg" firstAttribute="baseline" secondItem="u9X-eP-Zls" secondAttribute="baseline" id="jTO-zb-FUe"/>
+                            <constraint firstItem="u9X-eP-Zls" firstAttribute="leading" secondItem="Wd9-Sw-5Dg" secondAttribute="trailing" constant="28" id="pd1-ks-Dlu"/>
+                            <constraint firstItem="W79-KB-eih" firstAttribute="trailing" secondItem="8yT-Xa-rak" secondAttribute="trailingMargin" id="uMN-hZ-xV5"/>
+                            <constraint firstItem="Vcl-gx-IzD" firstAttribute="bottom" secondItem="Bm5-VF-bsx" secondAttribute="bottom" id="x7u-dk-rce"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Bm5-VF-bsx"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="지도" image="map" catalog="system" id="Yov-cW-KyD"/>
+                    <connections>
+                        <outlet property="bottomImage" destination="Vcl-gx-IzD" id="wUp-mY-Ltg"/>
+                        <outlet property="descLabel" destination="W79-KB-eih" id="Awx-oC-39y"/>
+                        <outlet property="infectionLabel" destination="u9X-eP-Zls" id="mhg-hi-ijK"/>
+                        <outlet property="patientLabel" destination="Wd9-Sw-5Dg" id="wZ7-YI-a4P"/>
+                        <segue destination="M4Z-v1-hJf" kind="presentation" animates="NO" modalPresentationStyle="overFullScreen" id="s2y-Kd-zgy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DnC-2a-j5J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2028.985507246377" y="115.84821428571428"/>
+        </scene>
+        <!--질병관리본부-->
+        <scene sceneID="UfE-Bh-cye">
+            <objects>
+                <viewController id="MKf-K1-5Z4" customClass="SafariViewController" customModule="coronamap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qBa-Ff-cZV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="YJP-5U-3j1"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="질병관리본부" image="bookmark" catalog="system" id="eQ4-Ma-OGZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fNv-AS-tNS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2034.7826086956522" y="829.6875"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="17r-cn-vQq">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Zar-NY-uxP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wfw-aC-paQ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="rLm-8s-t0K" kind="relationship" relationship="viewControllers" id="TBx-Om-dHK"/>
+                        <segue destination="MKf-K1-5Z4" kind="relationship" relationship="viewControllers" id="KSO-Co-OAC"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="izN-h4-Xo0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1118.840579710145" y="115.84821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bookmark" catalog="system" width="56" height="64"/>
+        <image name="map" catalog="system" width="64" height="56"/>
+    </resources>
+</document>
